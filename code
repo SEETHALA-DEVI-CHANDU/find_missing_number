@@ -1,0 +1,23 @@
+/*
+CODE TO FIND THE MISSING ELEMENT IN THE SEQUENCE
+*/
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("Enter the no of elements in an array");
+    scanf("%d",&n);
+    int arr[n];
+    for(int i=0;i<n;i++){
+        printf("Enter the element %d\n",i+1);
+        scanf("%d",&arr[i]);
+    }
+    // FINDING THE SUM OF NATURAL NUMBERS
+    int sum=(n+2)*(n+1)/2;
+    for(int i=0;i<n;i++){
+        sum-=arr[i];
+    }
+    printf("\n\nMissing Element is %d",sum);
+    return 0;
+}
